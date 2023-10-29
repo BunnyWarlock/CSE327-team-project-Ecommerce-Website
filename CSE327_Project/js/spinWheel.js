@@ -31,6 +31,7 @@ let myChart = new Chart(wheel, {
   },
 });
 const valueGenerator = (angleValue) => {
+  let check;
   for (let i of rotationValues){
     if (i.minDegree+angleValue < 360 && i.maxDegree+angleValue > 360)
       check = ((i.minDegree+angleValue)%360 <= 90 || (i.maxDegree+angleValue)%360 >= 90);
@@ -64,6 +65,8 @@ spinBtn.addEventListener("click", () => {
       resultValue -= 5;
       myChart.options.rotation = 0;
     } else if (resultValue <= 0 || (count > 15 && myChart.options.rotation == randomDegree)) {
+      myChart.options.rotation = randomDegree;
+      myChart.update();
       valueGenerator(randomDegree);
       clearInterval(rotationInterval);
       count = 0;
