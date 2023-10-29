@@ -26,7 +26,8 @@
                 <th>Remove Item</th>
             </tr>
             <?php
-            $query = "SELECT * FROM `product_second` ORDER BY id ASC";
+            // PHP code to fetch and display cart items from the database
+            $query = "SELECT * FROM 'product_second' ORDER BY id ASC";
             $result = mysqli_query($conn, $query);
             $total = 0;
             if (mysqli_num_rows($result) > 0) {
