@@ -1,10 +1,25 @@
+/**
+ * DOM element representing the element with the 'add' class.
+ * @type {HTMLElement}
+ */
 const addBtn = document.querySelector(".add");
+/**
+ * DOM element representing the element with the 'inp-group' class.
+ * @type {HTMLElement}
+ */
 const input = document.querySelector(".inp-group");
 
+/**
+ * Removes the dynamically formed input row
+ */
 function removeInput(){
   this.parentElement.remove();
 }
 
+/**
+ * Adds a dynamically formed input row in the website.
+ * Has the dropdown input tierNo and a number input tierProbability
+ */
 function addInput(){
   const tierNo = document.createElement("select");
   tierNo.placeholder = "Enter Tier Number";

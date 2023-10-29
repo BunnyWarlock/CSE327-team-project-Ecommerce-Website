@@ -1,20 +1,35 @@
+/**
+ * DOM element representing the element with the 'add' class.
+ * @type {HTMLElement}
+ */
 const addBtn = document.querySelector(".add");
+/**
+ * DOM element representing the element with the 'inp-group' class.
+ * @type {HTMLElement}
+ */
 const input = document.querySelector(".inp-group");
 
+/**
+ * Removes the dynamically formed input row
+ */
 function removeInput(){
   this.parentElement.remove();
 }
 
+/**
+ * Adds a dynamically formed input row in the website.
+ * Has the dropdown input item and a number input discount
+ */
 function addInput(){
   const item = document.createElement("select");
-  item.placeholder = "Enter Tier Number";
+  item.placeholder = "Enter Item";
   item.style = "width: 50%; margin: 0;";
   item.name = "item[]";
   item.setAttribute("required", "true");
 
   const temp = document.createElement("option");
   temp.value = "";
-  temp.text = "Selecy an Item";
+  temp.text = "Select an Item";
   temp.setAttribute("disabled", "true");
   temp.setAttribute("selected", "true");
   temp.setAttribute("hidden", "true");

@@ -4,6 +4,9 @@ const search = document.querySelector('.input_group input'),
 
 search.addEventListener('input', searchTable);
 
+/**
+ * Implements the search functionality for the table
+ */
 function searchTable() {
   table_rows.forEach((row, i) => {
     let table_data = row.textContent.toLowerCase(),
@@ -35,6 +38,10 @@ table_headings.forEach((head, i) => {
     sortTable(i, sort_asc);
   }
 })
+
+/**
+ * Implements the table sorting function
+ */
 function sortTable(column, sort_asc) {
   [...table_rows].sort((a, b) => {
     let first_row = a.querySelectorAll('td')[column].textContent.toLowerCase(),

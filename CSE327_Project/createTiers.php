@@ -78,7 +78,7 @@
         <br>
       </div>
 
-      <h1 style="margin:0; padding:0; color: #cbc8c7;">Create Tiers</h1>
+      <h1 style="margin:0; padding:0; color: #cbc8c7;">Create Tier</h1>
       <?php if (!empty($errMessage)): ?>
         <em style="color:red; font-size:20px;"><b><?= $errMessage ?></b></em>
       <?php endif; ?>
@@ -102,7 +102,7 @@
 
         <div class="header">
           <button style="margin:10; padding:10; background-color: rgba(0, 0, 0, 0.0); border: none;">
-            <br><h3 style="margin:0; padding:0; color: #fec89a;">Create Lottery</h3>
+            <br><h3 style="margin:0; padding:0; color: #fec89a;">Create Tier</h3>
           </button>
         </div>
       </form>

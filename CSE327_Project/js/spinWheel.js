@@ -2,6 +2,11 @@ const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
 const finalValue = document.getElementById("final-value");
 
+/**
+ * Creates the pie chart that represents the lottery wheel
+ * 
+ * @var {Chart}
+ */
 let myChart = new Chart(wheel, {
   plugins: [ChartDataLabels],
   type: "pie",
@@ -30,6 +35,11 @@ let myChart = new Chart(wheel, {
     },
   },
 });
+
+/**
+ * Takes in the final angle of the pie chart after the spinning
+ * and then decides which portion falls beneath the pointer arrow placed at 3 o'clock
+ */
 const valueGenerator = (angleValue) => {
   let check;
   for (let i of rotationValues){
@@ -53,6 +63,11 @@ const valueGenerator = (angleValue) => {
 
 let count = 0;
 let resultValue = 101;
+/**
+ * Takes a random angle
+ * Spins the pie chart, reducing the spin speed after every 360 degree spin
+ * Then checks after at least 15 spins if the chart degree == the random angle
+ */
 spinBtn.addEventListener("click", () => {
   spinBtn.disabled = true;
   finalValue.innerHTML = `<p>Good Luck!</p>`;

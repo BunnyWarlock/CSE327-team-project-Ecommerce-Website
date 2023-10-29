@@ -1,6 +1,15 @@
 <?php
 
+/**
+ * This is the model class for the table 'items'
+ */
 class ItemsModel extends Db{
+  /**
+   * Gets all the items stored in the table 'items'
+   *
+   * @return  array|string  An array of rows, where each row is represented as an associative array. 
+   *                        Or returns a string if there is no rows or an error ocurred
+   */
   protected function getItems(){
     $mysqli = $this->connect();
     $sql = "select ID, name from items";
