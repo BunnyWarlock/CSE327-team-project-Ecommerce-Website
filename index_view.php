@@ -20,7 +20,8 @@
         <h2>Product</h2>
         <div class="container">
             <?php
-            $query = "SELECT * FROM `product_first` ORDER BY id ASC";
+            // PHP code to fetch and display product information from the database
+            $query = "SELECT * FROM 'product_first' ORDER BY id ASC";
             $result = mysqli_query($conn, $query);
 
             if (mysqli_num_rows($result) > 0) {
