@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+*{
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather', serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(background.png) no-repeat;
+  background-size: cover;
+  background-position: center ;
+   
+
+}
+
+h1{
+  padding-bottom: 20px;
+}
+
+.input-box{
+  
+}
