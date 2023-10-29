@@ -1,4 +1,5 @@
 <?php
+// Include autoloader and necessary class
 include 'includes/autoloader.inc.php';
 include 'classes/ReturnProductControl.class.php';
 ?>
@@ -38,11 +39,13 @@ include 'classes/ReturnProductControl.class.php';
 
   
   <?php
+  // Check if the form was submitted (POST request)
   if($_SERVER["REQUEST_METHOD"] == "POST"){
     $userName = $_POST['username'];
     $productName = $_POST['productname'];
     $returnReason = $_POST['return_product'];
 
+  // Create an instance of the ReturnProductControl class and set the return product details
   $testObj = new ReturnProductControl() ;
   $testObj-> setReturnProduct($userName, $productName, $returnReason);
   }
